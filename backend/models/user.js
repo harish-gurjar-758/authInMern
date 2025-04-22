@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
 import jwt from "jsonwebtoken";
-import joi from "joi";
 import passwordComplexity from "joi-password-complexity";
 import Joi from "joi";
 
@@ -28,7 +27,7 @@ userSchema.methods.generateAuthToken = function () {
     return token
 };
 
-const User = mongoose.model("user", userSchema);
+const User = mongoose.model("User", userSchema);
 
 const validate = (data) => {
     const Schema = Joi.object({
@@ -40,4 +39,4 @@ const validate = (data) => {
     return Schema.validate(data)
 };
 
-module.exports ={User, validate};
+export default { User, validate };
