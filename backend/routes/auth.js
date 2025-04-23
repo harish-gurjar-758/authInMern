@@ -1,7 +1,9 @@
-import router from 'express';
-import User from '../models/user.js';
+import express from 'express';
+import User from '../moduls/user.models.js';
 import Joi from 'joi';
 import bcrypt from 'bcrypt';
+
+const router = express.Router();
 
 router.post("/", async(req, res) =>{
     try {
@@ -32,4 +34,4 @@ const validate = (data) =>{
     return schema.validate(data);
 }
 
-module.exports = router;
+export default router;

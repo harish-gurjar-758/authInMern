@@ -39,4 +39,4 @@ const validate = (data) => {
     return Schema.validate(data)
 };
 
-export default { User, validate };
+export default {User, validate};
