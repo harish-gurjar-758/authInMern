@@ -18,8 +18,8 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use('/api/users', userRoutes);
-app.use('/api/auth', authRoutes);
+app.use('/apis/users', userRoutes);
+app.use('/apis/auth', authRoutes);
 
 // Start server
 const PORT = process.env.PORT || 5500;

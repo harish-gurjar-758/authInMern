@@ -21,13 +21,13 @@ const Signup = () => {
         e.preventDefault();
         try {
             const response = await SignUp(data); // Call the SignUp API with user data
-            console.log('✅ Signup successful:', response);
+            console.log('Signup successful:', response);
             navigate('/login'); // Redirect to login after successful signup
         } catch (error) {
             if (error.response?.status >= 400 && error.response?.status <= 500) {
                 setError(error.response.data.message); // Show error message from API
             } else {
-                setError('Something went wrong. Please try again.');
+                setError('Something want wrong. Please try again.');
             }
         }
     };
